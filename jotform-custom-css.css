@@ -1,0 +1,169 @@
+/* ==========================================================================
+   JotForm Custom CSS — makes the embedded registration form match the site.
+
+   THIS FILE IS NOT LOADED BY THE WEBSITE. It cannot be: the form runs inside a
+   cross-origin iframe, so nothing in assets/css/styles.css can reach inside it.
+   The only way to restyle the form is to paste this into JotForm itself.
+
+   WHERE TO PASTE IT
+     1. Open the form in JotForm Form Builder
+     2. Form Designer (the paint-roller icon, top right)
+     3. "Styles" tab -> scroll to the bottom -> "Inject Custom CSS"
+     4. Paste everything below, then Save
+
+   Colours are hardcoded because JotForm has no access to the site's CSS
+   variables. They match assets/css/styles.css exactly:
+     burgundy #6B1029   hover #8A2338   gold text #8E6420
+     gold line #E6D3B4  cream #FDF8F3   ink #2E2A2B   muted #5C5457
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+/* --- Canvas ------------------------------------------------------------- */
+
+.supernova,
+body {
+  background: #ffffff !important;
+}
+
+.form-all {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif !important;
+  color: #2E2A2B !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin: 0 auto !important;
+}
+
+/* The site already prints a heading and the logo directly above the embed, so
+   the form's own header block is hidden to avoid showing both twice.
+   Delete this rule if you would rather keep the form's header. */
+.form-header-group {
+  display: none !important;
+}
+
+/* --- Labels ------------------------------------------------------------ */
+
+.form-label,
+.form-label-top,
+.form-label-left,
+.form-label-right {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: #6B1029 !important;
+  letter-spacing: .005em !important;
+}
+
+.form-sub-label {
+  font-size: 11px !important;
+  color: #5C5457 !important;
+}
+
+.form-required {
+  color: #8E6420 !important;
+}
+
+/* --- Inputs ------------------------------------------------------------ */
+
+.form-textbox,
+.form-textarea,
+.form-dropdown,
+.form-radio-other-input,
+.form-checkbox-other-input {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: #2E2A2B !important;
+  background: #ffffff !important;
+  border: 1px solid #E6D3B4 !important;
+  border-radius: 4px !important;
+  padding: 9px 11px !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.form-textbox:focus,
+.form-textarea:focus,
+.form-dropdown:focus,
+.form-radio-other-input:focus,
+.form-checkbox-other-input:focus {
+  border-color: #6B1029 !important;
+  box-shadow: 0 0 0 2px rgba(107, 16, 41, .14) !important;
+  outline: none !important;
+}
+
+/* Native controls pick up the brand colour for ticks and dots. */
+.form-radio,
+.form-checkbox {
+  accent-color: #6B1029 !important;
+}
+
+.form-line {
+  padding: 10px 0 !important;
+}
+
+/* JotForm highlights the field being filled in. */
+.form-line-active {
+  background: #FDF8F3 !important;
+  border-radius: 6px !important;
+}
+
+/* --- Errors ------------------------------------------------------------ */
+
+.form-line-error {
+  background: #FDF3F1 !important;
+  border-radius: 6px !important;
+}
+
+.form-error-message {
+  background: #6B1029 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  font-size: 11.5px !important;
+}
+
+.form-line-error .form-textbox,
+.form-line-error .form-textarea,
+.form-line-error .form-dropdown {
+  border-color: #B3261E !important;
+}
+
+/* --- Submit ------------------------------------------------------------ */
+
+.form-submit-button,
+.form-submit-print {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: .09em !important;
+  text-transform: uppercase !important;
+  background: #6B1029 !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  padding: 13px 30px !important;
+  box-shadow: none !important;
+  transition: background-color .25s ease !important;
+}
+
+.form-submit-button:hover,
+.form-submit-print:hover {
+  background: #8A2338 !important;
+}
+
+/* --- Section headings, if the form uses them -------------------------- */
+
+.form-section-header,
+.form-header {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  color: #6B1029 !important;
+}
+
+.form-subHeader {
+  font-family: 'Inter', sans-serif !important;
+  color: #5C5457 !important;
+  font-size: 12.5px !important;
+}
