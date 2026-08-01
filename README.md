@@ -135,9 +135,9 @@ source if anything needs re-cropping:
 
 | Original | Size | Used for |
 |---|---|---|
-| `children1.jpg` | 1280×853 | Hero + 2 gallery crops — "The Refined & Confident Girl" boardroom session |
+| `children1.jpg` | 1280×853 | Why section + 2 gallery crops — "The Refined & Confident Girl" boardroom session |
 | `children3.jpeg` | 6240×4160 | 1 gallery crop — the necktie-tying session |
-| `newchildren.jpeg` | 6240×4160 | Why section — full group indoors with the branded banner |
+| `newchildren.jpeg` | 6240×4160 | Hero — full group indoors with the branded banner |
 | `newchildren2.jpeg` | 6240×4160 | 1 gallery crop — handshake demo, "Making Good First Impressions" |
 | `newchildren3.jpeg` | 3480×1632 | 1 gallery crop — "Speech Structure & Practical Presentation" |
 | `trainer.png` | 1002×1402 | The trainer portrait |
@@ -151,8 +151,8 @@ y=190.
 
 | File | Size | Shows |
 |---|---|---|
-| `hero-workshop.jpg` | 1200×700 | Trainer presenting to participants around the boardroom table |
-| `why-session.jpg` | 875×700 | The full group of participants indoors |
+| `hero-group.jpg` | 1400×800 | The full group of participants with the branded banner |
+| `why-boardroom.jpg` | 760×610 | Trainer presenting to participants around the boardroom table |
 | `gallery-1-tie-practice.jpg` | 900×500 | A participant tying a necktie as the trainer demonstrates |
 | `gallery-2-first-impressions.jpg` | 900×500 | Handshake demonstration under "Making Good First Impressions" |
 | `gallery-3-girls-session.jpg` | 900×500 | Participants seated around the table |
