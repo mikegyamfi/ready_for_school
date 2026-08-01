@@ -52,6 +52,30 @@ Nothing navigates away except the payment hand-off:
 | **Pay with Paystack** | `https://paystack.com/pay/d53mhkvkh4` — new tab | 1 |
 | Open the form in a new tab | the JotForm — new tab, fallback only | 1 |
 
+### Two ways to pay
+
+The payment card offers Paystack as the primary action, then an **"or send directly"** panel with the
+mobile money details:
+
+| | |
+|---|---|
+| MTN Mobile Money | `0598965778` |
+| MTN MoMo Pay | `297955` |
+| Account name | Manners on Point School of Etiquette |
+
+Both numbers have a **copy button** — typing a MoMo number off a phone screen is exactly where people
+make mistakes. Clicking copies the digits, flips the icon to a tick for 1.8 seconds, and announces
+`"0598965778 copied"` to screen readers via an `aria-live` region.
+
+One caveat if you ever open `index.html` straight off disk: `navigator.clipboard` requires a secure
+context, which `file://` is not, so the button falls back to `execCommand` and, if even that is
+blocked, tells the user to press Ctrl+C. Served over http/https it uses the real clipboard API —
+verified end to end by writing and reading the value back.
+
+The card asks parents to keep their transaction ID, since a direct MoMo transfer carries no
+registration reference. Worth deciding how you want that ID collected — the JotForm has no field for
+it, so right now it would arrive by WhatsApp or email.
+
 The two-step order is reinforced in four places: the numbered `1 → 2` list under the main Reserve
 button, the ordering of the two panels, the numbered step headings, and *"Register first, then pay to
 confirm your child's place"* in the closing band.

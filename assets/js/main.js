@@ -154,6 +154,52 @@
     });
   }
 
+  /* ------------------------------- Copy the mobile money numbers
+
+     navigator.clipboard needs a secure context, which file:// is not, so
+     there's an execCommand fallback for opening the page straight off disk.
+     ------------------------------------------------------------------- */
+
+  var copyStatus = document.getElementById('copy-status');
+
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:-999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function flash(button, message) {
+    button.classList.add('is-copied');
+    if (copyStatus) copyStatus.textContent = message;
+    window.setTimeout(function () {
+      button.classList.remove('is-copied');
+      if (copyStatus) copyStatus.textContent = '';
+    }, 1800);
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.js-copy'), function (button) {
+    button.addEventListener('click', function () {
+      var value = button.getAttribute('data-copy');
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(value).then(function () {
+          flash(button, value + ' copied');
+        }, function () {
+          flash(button, legacyCopy(value) ? value + ' copied' : 'Press Ctrl+C to copy ' + value);
+        });
+      } else {
+        flash(button, legacyCopy(value) ? value + ' copied' : 'Press Ctrl+C to copy ' + value);
+      }
+    });
+  });
+
   /* --------------------------------- Image fallback for missing assets */
 
   Array.prototype.forEach.call(document.images, function (img) {
