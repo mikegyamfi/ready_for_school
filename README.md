@@ -127,30 +127,42 @@ can do it.
 
 ## Photographs
 
-**All 8 images are cropped out of `inspo.jpeg` and are placeholders.** They show the right subjects
-but the mockup is only 607px wide, so they are upscaled 1.8–2.6× and visibly soft. Replace them with
-real photography at the sizes below and no code changes are needed — keep the filenames.
+**Every photo on the site is now real Manners on Point photography.** Nothing is cropped from the
+mockup any more, and no stock imagery is used.
 
-| File | Current | Recommended | Ratio | Should show |
-|---|---|---|---|---|
-| `hero-dining.jpg` | 760×458 | 1600×960 | ~5:3 | Children at a formally laid dining table, conversing. Right side of frame stays clear-ish — the left edge fades into the cream background |
-| `classroom-student.jpg` | 330×325 | 800×780 | ~1:1 | A single confident student at a desk, writing |
-| `trainer-abenaa.jpg` | 340×430 | 800×1010 | ~4:5 | Abenaa Antwiwaa Adusei, portrait, head-and-shoulders |
-| `gallery-1-peer-conversation.jpg` | 279×150 | 800×430 | ~16:9 | Two participants in conversation |
-| `gallery-2-public-speaking.jpg` | 288×150 | 800×420 | ~16:9 | A child speaking into a microphone |
-| `gallery-3-dining-practice.jpg` | 357×150 | 800×340 | ~7:3 | Table-etiquette practice |
-| `gallery-4-certificates.jpg` | 348×150 | 800×345 | ~7:3 | Group holding certificates |
-| `gallery-5-presentation.jpg` | 288×150 | 800×420 | ~16:9 | A participant presenting |
+The originals live alongside the crops and are not referenced by the page. Keep them; they're the
+source if anything needs re-cropping:
 
-Gallery images are cover-cropped to a uniform height, so exact ratios aren't critical — put the
+| Original | Size | Used for |
+|---|---|---|
+| `children1.jpg` | 1280×853 | Hero, plus 2 gallery crops — "The Refined & Confident Girl" boardroom session |
+| `children2.png` | 1080×1350 | Why section + 1 gallery crop — Ultimate Summer Camp 2025 |
+| `children3.jpeg` | 6240×4160 | 2 gallery crops — the necktie-tying session |
+| `trainer.png` | 1002×1402 | The trainer portrait |
+
+`children2.png` is a **social-media poster**, not a plain photo: it carries the logo across the sky
+and a caption band below. I cropped to the photograph only (the picture ends at y=1060; the logo
+occupies y110–210), so no baked-in text reaches the site. `children1.jpg` has an "m." watermark
+bottom-right, so its crops stay above it.
+
+| File | Size | Shows |
+|---|---|---|
+| `hero-workshop.jpg` | 1200×700 | Trainer presenting to participants around the boardroom table |
+| `why-session.jpg` | 760×690 | Summer camp group, outdoors |
+| `gallery-1-tie-practice.jpg` | 900×500 | A participant tying a necktie as the trainer demonstrates |
+| `gallery-2-summer-camp.jpg` | 900×500 | Summer camp group photograph |
+| `gallery-3-girls-session.jpg` | 900×500 | Participants seated around the table |
+| `gallery-4-practical-session.jpg` | 900×500 | Course materials and participants at the training table |
+| `gallery-5-trainer-presenting.jpg` | 900×500 | Trainer presenting beside the branded banners |
+| `trainer-abenaa.jpg` | 800×1000 | Abenaa Antwiwaa Adusei, head-and-shoulders (4:5) |
+
+Gallery images are cover-cropped to a uniform height, so exact ratios aren't critical — keep the
 subject near the centre. If an image ever fails to load, `main.js` swaps in a burgundy/gold gradient
 block rather than showing a broken-image icon.
 
-I did try sourcing real stock photography first. Unsplash's search is bot-blocked (only direct
-`images.unsplash.com/photo-…` URLs resolve, so photos can't be chosen — only guessed), and three
-rounds of Pexels curation came back off-register: rural documentary imagery, a menstrual-health
-campaign shoot with visible advocacy placards, then toddlers and birthday balloons. Nothing matched
-"premium etiquette programme, ages 9–15". The mockup's own photos were the better placeholder.
+Note on repo size: the four originals total about 9.3 MB, most of it `children2.png` (3.7 MB) and
+`children3.jpeg` (5.1 MB). That's fine for a repo this small, but say the word if you'd rather they
+moved out of version control. The eight images the page actually loads total under 1 MB.
 
 ## Design decisions
 
