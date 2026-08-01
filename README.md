@@ -135,24 +135,28 @@ source if anything needs re-cropping:
 
 | Original | Size | Used for |
 |---|---|---|
-| `children1.jpg` | 1280×853 | Hero, plus 2 gallery crops — "The Refined & Confident Girl" boardroom session |
-| `children2.png` | 1080×1350 | Why section + 1 gallery crop — Ultimate Summer Camp 2025 |
-| `children3.jpeg` | 6240×4160 | 2 gallery crops — the necktie-tying session |
+| `children1.jpg` | 1280×853 | Hero + 2 gallery crops — "The Refined & Confident Girl" boardroom session |
+| `children3.jpeg` | 6240×4160 | 1 gallery crop — the necktie-tying session |
+| `newchildren.jpeg` | 6240×4160 | Why section — full group indoors with the branded banner |
+| `newchildren2.jpeg` | 6240×4160 | 1 gallery crop — handshake demo, "Making Good First Impressions" |
+| `newchildren3.jpeg` | 3480×1632 | 1 gallery crop — "Speech Structure & Practical Presentation" |
 | `trainer.png` | 1002×1402 | The trainer portrait |
 
-`children2.png` is a **social-media poster**, not a plain photo: it carries the logo across the sky
-and a caption band below. I cropped to the photograph only (the picture ends at y=1060; the logo
-occupies y110–210), so no baked-in text reaches the site. `children1.jpg` has an "m." watermark
-bottom-right, so its crops stay above it.
+**The outdoor Summer Camp images have been removed** at your request, along with the poster they came
+from (`children2.png`, 3.7 MB). Everything on the site is now indoor session photography.
+
+Two watermark constraints the crops work around: `children1.jpg` carries an "m." mark bottom-right,
+so its crops stay above it, and `newchildren3.jpeg` has the logo top-left, so that crop starts below
+y=190.
 
 | File | Size | Shows |
 |---|---|---|
 | `hero-workshop.jpg` | 1200×700 | Trainer presenting to participants around the boardroom table |
-| `why-session.jpg` | 760×690 | Summer camp group, outdoors |
+| `why-session.jpg` | 875×700 | The full group of participants indoors |
 | `gallery-1-tie-practice.jpg` | 900×500 | A participant tying a necktie as the trainer demonstrates |
-| `gallery-2-summer-camp.jpg` | 900×500 | Summer camp group photograph |
+| `gallery-2-first-impressions.jpg` | 900×500 | Handshake demonstration under "Making Good First Impressions" |
 | `gallery-3-girls-session.jpg` | 900×500 | Participants seated around the table |
-| `gallery-4-practical-session.jpg` | 900×500 | Course materials and participants at the training table |
+| `gallery-4-presentation-practice.jpg` | 900×450 | Participants holding up their work during the speaking session |
 | `gallery-5-trainer-presenting.jpg` | 900×500 | Trainer presenting beside the branded banners |
 | `trainer-abenaa.jpg` | 800×1000 | Abenaa Antwiwaa Adusei, head-and-shoulders (4:5) |
 
@@ -160,9 +164,10 @@ Gallery images are cover-cropped to a uniform height, so exact ratios aren't cri
 subject near the centre. If an image ever fails to load, `main.js` swaps in a burgundy/gold gradient
 block rather than showing a broken-image icon.
 
-Note on repo size: the four originals total about 9.3 MB, most of it `children2.png` (3.7 MB) and
-`children3.jpeg` (5.1 MB). That's fine for a repo this small, but say the word if you'd rather they
-moved out of version control. The eight images the page actually loads total under 1 MB.
+Note on repo size: the six originals total about 15.8 MB — `newchildren2.jpeg` (5.2 MB),
+`children3.jpeg` (5.0 MB) and `newchildren.jpeg` (3.8 MB) are the bulk, all straight-off-the-camera
+6240×4160 frames. Say the word if you'd rather they moved out of version control; the eight images
+the page actually loads total under 1 MB.
 
 ## Design decisions
 
