@@ -665,7 +665,11 @@ svg {
   background: var(--cream-2);
   border-radius: var(--r-tile);
   padding: 14px clamp(15px, 1.7vw, 20px) 13px;
+  /* Quotes differ a lot in length. Equal-height cards + the attribution pushed
+     to the bottom keeps the "- Name" lines on one baseline across the row. */
+  display: flex;
 }
+.quote blockquote { display: flex; flex-direction: column; flex: 1; }
 .quote blockquote p { font-size: 12.8px; line-height: 1.65; color: var(--ink); }
 .quote blockquote p::before {
   content: "\201C";
@@ -677,7 +681,7 @@ svg {
   margin: 2px 7px 0 0;
   color: var(--burgundy);
 }
-.quote__by { font-size: 12px; font-weight: 700; color: var(--ink); margin-top: 11px; }
+.quote__by { font-size: 12px; font-weight: 700; color: var(--ink); margin-top: auto; padding-top: 11px; }
 
 /* -------------------------------------------------------------- Gallery */
 
@@ -933,6 +937,48 @@ svg {
   line-height: 1.5;
   color: var(--ink-soft);
 }
+
+/* ---- "Still have a question?" — WhatsApp ---- */
+
+.ask {
+  margin-top: clamp(18px, 2.2vw, 26px);
+  padding-top: clamp(16px, 2vw, 22px);
+  border-top: 1px solid var(--gold-line);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 16px;
+  text-align: center;
+}
+.ask__q {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(15px, 1.4vw, 17px);
+  color: var(--burgundy);
+}
+.ask__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--burgundy);
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 100px;
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px var(--gold-line);
+  transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.ask__link:hover {
+  background: #25D366;              /* WhatsApp green, used only on hover */
+  color: #08300F;
+  box-shadow: inset 0 0 0 1px #1FB855;
+  transform: translateY(-1px);
+}
+.ask__icon { width: 18px; height: 18px; flex: none; color: #25D366; }
+.ask__link:hover .ask__icon { color: #08300F; }
 
 /* ------------------------------------------------------------- Footer */
 
